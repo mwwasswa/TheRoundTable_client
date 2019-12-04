@@ -31,7 +31,7 @@ const BlogCreate = (props) => {
   }
 
   return (
-    <BlogForm blog={blog} handleChange={handleChange} handleSubmit={handleSubmit} cancelPath='/' />
+    <BlogForm blog={blog} handleChange={handleChange} handleSubmit={handleSubmit} cancelPath='#/blogs' />
   )
 }
 

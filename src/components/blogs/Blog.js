@@ -23,7 +23,7 @@ const Blog = props => {
       }
     })
       .then(() => {
-        props.alert({ heading: 'Success', message: 'Blog deleted', variant: 'warning' })
+        props.alert({ heading: 'Success', message: 'Blog deleted', variant: 'success' })
         props.history.push('/')
       })
       .catch(() => {

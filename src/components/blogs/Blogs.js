@@ -13,7 +13,7 @@ const Blogs = props => {
       .then(response => {
         setBlogs(response.data.blogs.reverse())
       })
-      .then(() => props.alert({ heading: 'Success', message: 'Viewing all posts', variant: 'success' }))
+      // .then(() => props.alert({ heading: 'Success', message: 'Viewing all posts', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Not able to retrieve posts', message: 'Sorry this isn\'t working', variant: 'success' }))
   }, [])
 
