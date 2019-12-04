@@ -1,1 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background: url('./background/Background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
