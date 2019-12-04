@@ -1,10 +1,9 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Nav from 'react-bootstrap/Nav'
 
 const BlogForm = (props) => {
-  const { blog, handleChange, handleSubmit } = props
+  const { blog, handleChange, handleSubmit, cancelPath } = props
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
@@ -48,7 +47,7 @@ const BlogForm = (props) => {
             />
           </Form.Group>
           <Button type="submit" variant="primary">Submit</Button>
-          <Nav.Link href='#/' variant="secondary" className="ml-2">Cancel</Nav.Link>
+          <Button type="button" href={cancelPath} variant="secondary" className="ml-2">Cancel</Button>
         </Form>
       </div>
     </div>
