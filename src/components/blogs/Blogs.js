@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
 const Blogs = props => {
   const [blogs, setBlogs] = useState([])
+  // const [filteredBlogs, setFilteredBlogs] = useState([])
 
   useEffect(() => {
     axios(`${apiUrl}/blogs`)
@@ -30,8 +31,8 @@ const Blogs = props => {
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
-          <h1>Category</h1>
-          {props.user && <Link to="/create-post">Add a post</Link>}
+          <h1>Viewing all Posts</h1>
+          {/* ({props.user && <Link to="/create-post">Add a post</Link>}) */}
         </div>
         <ListGroup>
           {blogsJsx}

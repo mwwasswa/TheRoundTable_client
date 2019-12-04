@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react'
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import Button from 'react-bootstrap/Button'
@@ -39,14 +39,14 @@ const Blog = props => {
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>{blog.category}</h2>
-        <h3 className="h5">written by {blog.title}</h3>
+        <h3 className="h5">{blog.title}</h3>
         {blog.category
-          ? <p>Blog about {blog.category}</p>
-          : <p className="text-muted">No original language specified</p>
+          ? <p>{blog.content}</p>
+          : <p className="text-muted">No content to show</p>
         }
         {userId === blog.owner && (
           <Fragment>
-            <Button href={`#blog/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
+            <Link to={`/blogs/${props.match.params.id}/edit`}> <Button variant="primary" className="mr-2">Update</Button></Link>
             <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
           </Fragment>
         )}

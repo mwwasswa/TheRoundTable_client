@@ -7,7 +7,7 @@ const BlogForm = (props) => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>Create new Post</h2>
+        <h2>Create/Edit Post</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="title">
             <Form.Label>Title</Form.Label>
@@ -21,15 +21,25 @@ const BlogForm = (props) => {
           <Form.Group controlId="category">
             <Form.Label>Category</Form.Label>
             <Form.Control
+              as='select'
               placeholder="Enter the category"
               value={blog.category}
               name="category"
               onChange={handleChange}
-            />
+            >
+              <option>Art</option>
+              <option>Sports</option>
+              <option>Entertainment</option>
+              <option>Culture</option>
+              <option>General</option>
+            </Form.Control>
+
           </Form.Group>
           <Form.Group controlId="content">
             <Form.Label>Content</Form.Label>
             <Form.Control
+              as='textarea'
+              rows='6'
               placeholder="Enter blog post content here"
               value={blog.content}
               name="content"

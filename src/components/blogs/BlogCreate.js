@@ -25,7 +25,7 @@ const BlogCreate = (props) => {
     })
       .then(response => {
         props.alert({ heading: 'Success', message: 'Blog created', variant: 'success' })
-        props.history.push(`/blogs/${response.data.blog._id}`)
+        props.history.push('/blogs')
       })
       .catch(() => props.alert({ heading: 'Errr...', message: 'Something went wrong', variant: 'danger' }))
   }
