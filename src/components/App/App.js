@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
+import './App.scss'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -8,6 +9,10 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Blogs from '../blogs/Blogs'
+import Blog from '../blogs/Blog'
+import BlogCreate from '../blogs/BlogCreate'
+import BlogEdit from '../blogs/BlogEdit'
 
 class App extends Component {
   constructor () {
@@ -53,6 +58,21 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/' render={() => (
+            <Blogs alert={this.alert} />
+          )} />
+          <Route exact path='/blogs/:id' render={() => (
+            <Blog alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-blog' render={() => (
+            <BlogCreate alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/blogs/:id/edit' render={() => (
+            <BlogEdit alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/blogs' render={() => (
+            <Blogs alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
