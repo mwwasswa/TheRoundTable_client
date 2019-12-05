@@ -28,7 +28,7 @@
 - Bootstrap
 - React
 - Github
-- Git 
+- Git
 
 ## INSTALLATION
  - fork and clone
