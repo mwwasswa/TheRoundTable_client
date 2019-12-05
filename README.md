@@ -1,7 +1,7 @@
-## GENERAL ASSEMBLY SEI CAPSTONE (Full-stack-project)
+# GENERAL ASSEMBLY SEI CAPSTONE (Full-stack-project)
 
 ## ABOUT THE APP
-  The Round Table app is a CRUD blog application that lets signed users create blog posts with a couple of different categories. The app also allows both authenticated and non authenticated users to view all available blog posts whether or not they are signed as I think it is an essential part of any blog site. That said, non authenticated users don't have the abilty to perform the create and delete actions as those are reserved for signed in users. 
+  The Round Table app is a CRUD blog application that lets signed users create blog posts with a couple of different categories. The app also allows both authenticated and non authenticated users to view all available blog posts whether or not they are signed as I think it is an essential part of any blog site. That said, non authenticated users don't have the abilty to perform the create and delete actions as those are reserved for signed in users.
 
 ## DEVELOPMENT PROCESS
  Having owned a blog in the past, I had a slight idea of what I wanted the front end to look like
@@ -28,6 +28,19 @@
 - Bootstrap
 - React
 
+## INSTALLATION
+ - fork and clone
+ - npm install
+ - npm run start
+
+ ## LINKS
+
+ [Deployed BackEnd API](https://coldworld.herokuapp.com/)
+
+ [BackEnd repo](https://github.com/mwwasswa/Capstone_api)
+
+ [Deployed FrontEnd Client](https://mwwasswa.github.io/TheRoundTable_client/#/)
+
 ## WIREFRAME
 
 ![image](./Capstonewireframe.jpg)
@@ -36,4 +49,5 @@
 
 ![image](./AppImage.png)
 
-## LINKS
+## WOULD LIKE TO ADD
+ - I would like to give the user to ability to add pictures to their posts
