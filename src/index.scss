@@ -4,16 +4,27 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background: url('./background/Background.jpg') no-repeat center center fixed;
+  background: url('./background/Background2.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: cursive;
+  color: #fff;
   text-align: center;
 }
 
-h1 {
-  margin: 20px, auto;
+p {
+font-family: sans-serif;
+color: #fff;
+margin-top: 95px;
+line-height: 30px;
+font-size: 18px;
+
+}
+ h2 {
+margin-top: 95px;
+font-size: 60px;
 }
 
-button {
-  display: inline;
+h1 {
+  margin: auto;
+  padding-bottom: 10px
 }
