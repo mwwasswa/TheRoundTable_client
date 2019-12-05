@@ -11,6 +11,7 @@ const Blog = props => {
   useEffect(() => {
     axios(`${apiUrl}/blogs/${props.match.params.id}`)
       .then(res => setBlog(res.data.blog))
+      .then(() => console.log(blog))
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Sorry, couldn\'t retrieve the requested blog', variant: 'danger' }))
   }, [])
 
@@ -35,15 +36,21 @@ const Blog = props => {
     return <p>Loading blogs...</p>
   }
 
+  console.log(blog)
+
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>{blog.category}</h2>
         <h3 className="h5">{blog.title}</h3>
-        {blog.category
+        {blog.content
           ? <p>{blog.content}</p>
           : <p className="text-muted">No content to show</p>
         }
+        {blog.picture &&
+        <img className="image" src={blog.picture} alt="testing"></img>
+        }
+
         {userId === blog.owner && (
           <Fragment>
             <Link to={`/blogs/${props.match.params.id}/edit`}> <Button variant="primary" className="mr-2">Update</Button></Link>

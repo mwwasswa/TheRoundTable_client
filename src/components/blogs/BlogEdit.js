@@ -6,7 +6,7 @@ import apiUrl from '../../apiConfig'
 import BlogForm from './BlogForm'
 
 const BlogEdit = (props) => {
-  const [blog, setBlog] = useState({ category: '', title: '', content: '' })
+  const [blog, setBlog] = useState({ category: '', title: '', content: '', picture: '' })
   const [updated, setUpdated] = useState(false)
 
   useEffect(() => {

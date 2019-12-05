@@ -5,7 +5,7 @@ import apiUrl from '../../apiConfig'
 import BlogForm from './BlogForm'
 
 const BlogCreate = (props) => {
-  const [blog, setBlog] = useState({ category: '', title: '', content: '' })
+  const [blog, setBlog] = useState({ category: '', title: '', content: '', picture: '' })
 
   const handleChange = event => {
     event.persist()

@@ -27,6 +27,7 @@ const BlogForm = (props) => {
               name="category"
               onChange={handleChange}
             >
+              <option value="">Choose the Category</option>
               <option>Art</option>
               <option>Sports</option>
               <option>Entertainment</option>
@@ -39,10 +40,22 @@ const BlogForm = (props) => {
             <Form.Label>Content</Form.Label>
             <Form.Control
               as='textarea'
-              rows='6'
+              rows='7'
               placeholder="Enter blog post content here"
               value={blog.content}
               name="content"
+              onChange={handleChange}
+            />
+
+          </Form.Group>
+          <Form.Group controlId="content">
+            <Form.Label>Picture</Form.Label>
+            <Form.Control
+              as='textarea'
+              rows='2'
+              placeholder="Insert link to picture here"
+              value={blog.picture}
+              name="picture"
               onChange={handleChange}
             />
           </Form.Group>
