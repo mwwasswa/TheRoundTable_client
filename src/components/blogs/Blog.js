@@ -27,7 +27,7 @@ const Blog = props => {
         props.history.push('/')
       })
       .catch(() => {
-        props.alert({ heading: 'Oppy!', message: 'Enable to delete', variant: 'danger' })
+        props.alert({ heading: 'Whopsy!', message: 'Enable to delete', variant: 'danger' })
       })
   }
 
