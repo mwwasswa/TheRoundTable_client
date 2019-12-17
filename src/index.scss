@@ -5,7 +5,7 @@ body {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background: url('./background/Background2.jpg') no-repeat center center fixed;
-  background-size: cover;
+  width: auto;
   font-family: cursive;
   color: #fff;
   text-align: center;
@@ -22,6 +22,7 @@ font-size: 18px;
 .image {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
  h2 {
@@ -36,11 +37,6 @@ h1 {
 
 .list-group {
   opacity: 0.7
-}
-
-.image {
-  width: 500px;
-  height: auto;
 }
 
 .mr-2 {
